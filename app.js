@@ -8,6 +8,10 @@ const bookRoutes = require('./routes/booksRoutes');
 const app = express()
 const port = 5000
 
+app.get('/', (req, res) => {
+  res.send('Welcome to the Book API');
+});
+
 app.use(cors())
 app.use(express.json())
 app.use(userRoutes);
